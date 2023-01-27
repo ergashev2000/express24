@@ -1,0 +1,255 @@
+.store__products {
+  min-height: 100vh;
+  max-width: 75%;
+  width: 100%;
+}
+
+.detail {
+  margin-top: 6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.back__btn {
+  position: relative;
+  font-size: 14px;
+  color: rgba(92, 87, 87, 0.518);
+
+  cursor: pointer;
+}
+.back__btn::before {
+  content: url(../../assets/icons/arrow-left-circle.svg);
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.detail__overview {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  max-width: 1000px;
+  height: 300px;
+  margin-right: 40px;
+  background-size: cover;
+  background-image: url("../../assets/images/product-detail-img.jpg");
+  margin-top: 30px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.detail__overview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+
+.overview__text {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  width: 100%;
+}
+.detail__info {
+  position: absolute;
+  top: -150px;
+  max-width: 700px;
+}
+
+.detail__overview--title {
+  color: #fff;
+  font-size: 45px;
+}
+
+.detail__info > ul {
+  display: flex;
+  gap: 10px;
+  margin-right: 100px;
+  padding-top: 20px;
+}
+.detail__info > ul > li {
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 5px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__icons {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  cursor: pointer;
+}
+.deliver {
+  cursor: pointer;
+}
+.cart {
+  width: 27%;
+  max-width: 300px;
+  height: 100vh;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  background-color: red;
+}
+
+/* Search input */
+.search__input {
+  flex: 1;
+  font-size: 16px;
+  display: block;
+  border: 1px solid #d1d1d6;
+  border-radius: 12px;
+  padding: 14px 12px;
+  width: 100%;
+
+  padding-left: 36px;
+}
+.detail__search--product {
+  max-width: 900px;
+  position: relative;
+}
+.detail__search--product::before {
+  content: url(../../assets/icons/search.svg);
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search__input {
+  outline: none;
+  border: 1px solid #d1d1d6;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.filter__items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 20px 0px;
+  width: 100%;
+}
+.filter__link {
+  padding: 12px 25px;
+  border-radius: 10px;
+  background-color: #f6f6fb;
+  color: #000;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.filter__item:nth-child(1) .filter__link {
+  background-color: #fff684;
+}
+.filter__item {
+  margin-bottom: 20px;
+}
+.filter__option {
+  width: 100%;
+  max-width: 100px;
+  background-color: green;
+}
+
+/* Card */
+.store__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  gap: 10px;
+
+  padding-right: 20px;
+}
+.store__card {
+  background-color: #f3f3f8;
+  border-radius: 16px;
+  position: relative;
+}
+
+.store__card > img {
+  width: 100%;
+  object-fit: cover;
+  padding: 5px;
+  height: 200px;
+
+  border-radius: 16px;
+}
+
+.store__card--body {
+  padding: 10px;
+}
+.store__card--title {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+.store__card--btn {
+  outline: none;
+  border: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.store__card--btn:hover{
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  background-color: #ffffffb1;
+}
+
+.shadow--card{
+  position: absolute;
+  background: 0 0 rgba(24, 24, 24, 0.5);
+  padding: 5px;
+  height: 190px;
+  width: 95%;
+  border-radius: 16px;
+  z-index: 2;
+  left: 5px;
+  top: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .store__cards {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .store__cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .store__cards {
+      grid-template-columns: 1fr;
+  }
+}

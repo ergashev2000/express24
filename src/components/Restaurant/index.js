@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
-import Card from '../Card'
+import { useSelector } from 'react-redux';
+
+import Card from "../Card";
+
+
 
 const index = () => {
+  const [selected, setSelected] = useState(false);
+  const selectRef = useRef(null);
+  const data = useSelector((state) => state.data);
+  
+  console.log(data);
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const handleSelect = (e) => {
+    if (selected) {
+      selectRef.current.style.maxHeight = "0";
+      selectRef.current.style.opacity = ".3";
+      setSelected(false);
+    } else {
+      selectRef.current.style.maxHeight = "280px";
+      selectRef.current.style.opacity = "1";
+      setSelected(true);
+    }
+  };
+
   return (
     <>
       <section className="container">
@@ -45,21 +72,37 @@ const index = () => {
               </a>
             </li>
           </ul>
-          <div className="filter__option">
-            <select name="" id="filter__select">
-                <option value="">$1</option>
-                <option value="">$1</option>
-                <option value="">$1</option>
-                <option value="">$1</option>
-            </select>
+          <div className="filter__select">
+            <div
+              className="filter__option--default"
+              onClick={(e) => handleSelect(e)}
+            >
+              Еще
+            </div>
+            <div
+              className="filter__option--box"
+              ref={selectRef}
+              onScroll={handleScroll}
+            >
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+              <div className="filter__option">Азиатская</div>
+            </div>
           </div>
         </div>
 
         <div className="cards">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+          {data.map(item => (
+            <Card item={item}/>
+          ))}
         </div>
         <div className="more__product">Показать еще</div>
       </section>

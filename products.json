@@ -1,0 +1,109 @@
+{
+    "data": [
+        {
+            "id": 322,
+            "nameCampany": "yetkazi beruvchi 1",
+            "phoneNumber": 908887776,
+            "catigory": [
+                "fast food",
+                "yevrepayski"
+            ],
+            "logo": "https://cdn.express24.uz/i/301/301/17c987cdde3.jpg",
+            "image": "https://media.express24.uz/r/1500/900/17c987e20d7.jpg",
+            "rate": 4.5,
+            "deleveryPrice": 45000,
+            "products": [
+                {
+                    "id": 342,
+                    "name": "product name1",
+                    "price": 32000,
+                    "image": "https://cdn.express24.uz/i/600/600/wPlbBxPSsb6mKVb2WSBzh.jpg",
+                    "rate": 4.5,
+                    "catigory": [
+                        "burger"
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": 2,
+            "nameCampany": "yetkazi beruvchi 2",
+            "catigory": [
+                "fast food",
+                "yevrepayski"
+            ],
+            "logo": "https://cdn.express24.uz/i/301/301/17c987cdde3.jpg",
+            "image": "https://media.express24.uz/r/1500/900/17c987e20d7.jpg",
+            "rate": 4.9,
+            "deleveryPrice": 23000,
+            "products": [
+                {
+                    "id": 342,
+                    "name": "product name1",
+                    "price": 32000,
+                    "image": "https://cdn.express24.uz/i/600/600/wPlbBxPSsb6mKVb2WSBzh.jpg",
+                    "rate": 4.5,
+                    "catigory": [
+                        "burger"
+                    ]
+                },
+                {
+                    "id": 342,
+                    "name": "product name2",
+                    "price": 32000,
+                    "image": "https://cdn.express24.uz/i/600/600/wPlbBxPSsb6mKVb2WSBzh.jpg",
+                    "rate": 4.5,
+                    "catigory": [
+                        "burger"
+                    ]
+                }
+            ]
+        },
+
+        {
+            "id": 3234,
+            "nameCampany": "yetkazi beruvchi 3",
+            "catigory": [
+                "fast food",
+                "yevrepayski"
+            ],
+            "logo": "https://cdn.express24.uz/i/301/301/17c987cdde3.jpg",
+            "image": "https://media.express24.uz/r/1500/900/17c987e20d7.jpg",
+            "rate": 4.5,
+            "deleveryPrice": 12000,
+            "products": [
+                {
+                    "id": 342,
+                    "name": "product name1",
+                    "price": 32000,
+                    "image": "https://cdn.express24.uz/i/600/600/wPlbBxPSsb6mKVb2WSBzh.jpg",
+                    "rate": 4.5,
+                    "catigory": [
+                        "burger"
+                    ]
+                },
+                {
+                    "id": 342,
+                    "name": "product name2",
+                    "price": 32000,
+                    "image": "https://cdn.express24.uz/i/600/600/wPlbBxPSsb6mKVb2WSBzh.jpg",
+                    "rate": 4.5,
+                    "catigory": [
+                        "burger"
+                    ]
+                },
+                {
+                    "id": 342,
+                    "name": "product name3",
+                    "price": 32000,
+                    "image": "https://cdn.express24.uz/i/600/600/wPlbBxPSsb6mKVb2WSBzh.jpg",
+                    "rate": 4.5,
+                    "catigory": [
+                        "burger"
+                    ]
+                }
+            ]
+        }
+    ]
+}

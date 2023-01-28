@@ -10,7 +10,7 @@
   left: 50%;
   transform: translateX(-50%);
 
-  z-index: 2;
+  z-index: 99;
   padding: 5px 15px;
   width: 100%;
   margin-bottom: 50px;
@@ -67,7 +67,9 @@
   flex-direction: column;
 
   padding: 10px;
+  padding-right: 30px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .profil > svg {
@@ -168,12 +170,9 @@
   font-size: 14px;
   white-space: nowrap;
 }
-.filter__item {
-  margin-bottom: 20px;
-}
+
 .filter__option {
   width: 100%;
-  max-width: 100px;
   background-color: green;
 }
 

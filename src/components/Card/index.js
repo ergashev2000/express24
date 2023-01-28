@@ -4,34 +4,40 @@ import Car from "../../assets/icons/car.svg";
 import Like from "../../assets/icons/heart.svg";
 import Star from "../../assets/icons/star.svg";
 
-import Img2 from "../../assets/images/logo-pto.jpg";
+import { Link } from "react-router-dom";
 
-import Img1 from "../../assets/images/img1.jpg";
+const index = ({ item }) => {
+  const handleCard = () => {};
 
-const index = () => {
   return (
     <>
-      <div className="card">
-      <span className="store__img"><img src={Img2}/></span>
-        <img src={Img1} alt="" />
+      <Link
+        to={`/store/${item.id}`}
+        className="card"
+        onClick={() => handleCard(item.id)}
+      >
+        <span className="store__img">
+          <img src={item.logo} />
+        </span>
+        <img src={item.image} alt={item.name} />
         <div className="card__body">
-          <h3 className="card__body--title">Broadway Lounge Bar</h3>
+          <h3 className="card__body--title">{item.name}</h3>
           <div className="card__body-category">
-            Европейская / Европейская / Европейская / Европейская
+            {item.catigory.map((item) => "  - " + item)}
           </div>
           <div className="card__bottom">
             <span className="star">
-              <img src={Star} alt="" /> 4.4
+              <img src={Star} alt="" /> {item.rate}
             </span>
             <span className="price">
-              <img src={Car} /> 14 000
+              <img src={Car} /> {item.deleveryPrice}
             </span>
           </div>
           <span className="card__like">
             <img src={Like} />
           </span>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

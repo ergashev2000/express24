@@ -1,22 +1,17 @@
 import React from "react";
 
-// import Header from '../../components/Header'
-import Discount from '../../components/Discount'
-import Store from '../../components/Store'
-import Restaurant from '../../components/Restaurant'
-import Footer from '../../components/Footer'
+import Discount from "../../components/Discount";
+import Store from "../../components/StoreMain";
+import Restaurant from "../../components/Restaurant";
 
-import "./style.css"
-
+import "./style.css";
 
 const index = () => {
   return (
     <>
-     {/* <Header/> */}
-     <Discount/>
-     <Store/>
-     <Restaurant/>
-     <Footer/>
+      <Discount />
+      <Store />
+      <Restaurant />
     </>
   );
 };
